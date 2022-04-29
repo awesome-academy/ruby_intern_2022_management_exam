@@ -1,0 +1,1 @@
+# ruby_intern_2022_management_exam
