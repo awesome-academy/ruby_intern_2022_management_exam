@@ -51,6 +51,7 @@ yarn-debug.log*
 /config/master.key
 
 /test/
+/spec/
 
 /config/credentials.yml.enc
 /config/database.yml
