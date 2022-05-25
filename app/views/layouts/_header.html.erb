@@ -1,0 +1,27 @@
+ <nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <%= link_to t(".home_name"), root_path, class:"navbar-brand" %>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to t(".home"), root_path %></li>
+        <% if logged_in? %>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <%= current_user.name %>
+              <i class="fa-solid fa-angle-down s-13"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+              <li><%= link_to "Profile", current_user %></li>
+              <li> <%= link_to "Log out", logout_path, method: :delete %></li>
+            </ul>
+          </li>
+        <% else %>
+          <li><%= link_to t(".sign_up"), signup_path %></li>
+          <li><%= link_to t(".log_in"), login_path %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>

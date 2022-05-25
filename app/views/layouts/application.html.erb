@@ -12,29 +12,14 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <div class="navbar-header">
-          <%= link_to t(".home_name"), "#", class:"navbar-brand" %>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to t(".home"), "#" %></li>
-            <li><%= link_to t(".sign_up"), "#"  %></li>
-            <li><%= link_to t(".log_in"), "#" %></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <%= render "layouts/header" %>
     <div class="container">
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
       <%= yield %>
+      <%= debug(params) if Rails.env.development? %>
     </div>
-    <div class="footer">
-      <div class="container">
-        <p class="text-muted"><%= t(".change_language") %></p>
-        <%= link_to t(".english"), locale: :en %> |
-        <%= link_to t(".vietnamese"), locale: :vi %>
-      </div>
-    </div>
+    <%= render "layouts/footer" %>
   </body>
 </html>
