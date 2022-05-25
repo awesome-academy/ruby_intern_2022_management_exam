@@ -1,0 +1,14 @@
+vi:
+  layouts:
+    application:
+      base_title: "Hệ thống quản lý bài thi"
+      home: "Trang chủ"
+      sign_up: "Đăng ký"
+      log_in: "Đăng nhập"
+      change_language: "Thay đổi ngôn ngữ"
+      english: "Tiếng Anh"
+      vietnamese: "Tiếng Việt"
+  static_pages:
+    home:
+      home_name: "Hệ thống quản lý bài thi"
+      sign_up_now: "Đăng ký ngay"
