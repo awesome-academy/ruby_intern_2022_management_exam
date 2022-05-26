@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2022_05_20_062917) do
   create_table "questions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "subject_id", null: false
     t.string "description"
-    t.integer "question_type"
+    t.integer "question_type", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["subject_id"], name: "index_questions_on_subject_id"
@@ -56,7 +56,7 @@ ActiveRecord::Schema.define(version: 2022_05_20_062917) do
     t.bigint "user_id", null: false
     t.bigint "exam_id", null: false
     t.integer "score"
-    t.integer "status"
+    t.integer "status", default: 2
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["exam_id"], name: "index_results_on_exam_id"

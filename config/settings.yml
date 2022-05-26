@@ -6,3 +6,6 @@ user:
     max_length: 50
   password:
     min_length: 6
+subject:
+  item: 6
+  link_image: "https://avatars.githubusercontent.com/u/4223"

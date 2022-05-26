@@ -1,0 +1,9 @@
+<% @subject.each do |subject| %>
+  <div class="col-md-4" >
+    <div class="jumbotron align-center" style="padding: 45px 45px 20px 45px; background-color: #f2f2f2!important;">
+      <%= image_tag Settings.subject.link_image, class:"img-thumbnail img-responsive" %>
+      <p style="text-align: center; font-family: georgia; color: #595959;"><%= subject.name %></p>
+      <%= link_to t(".exam"), "#", class:"btn btn-md btn-primary"%>
+    </div>
+  </div>
+<% end %>
