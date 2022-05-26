@@ -1,16 +1,40 @@
 en:
   layouts:
     application:
-      home_name: "Exam Management System"
       base_title: "Exam Management System"
-      home: "Home"
-      sign_up: "Sign up"
       sign_up_now: "Sign Up Now"
+    header:
+      sign_up: "Sign up"
       log_in: "Login"
-      change_language: "Change language"
+      home: "Home"
+      home_name: "Exam Management System"
+    footer:
       english: "English"
+      change_language: "Change language"
       vietnamese: "Vietnamese"
   static_pages:
     home:
       home_name: "Exam Management System"
       sign_up_now: "Sign Up Now"
+  users:
+    new:
+      title: "Sign up"
+      password_require: "(6 characters minimum)"
+      submit: "Sign up"
+    show:
+      show_error: "No information for user"
+    create:
+      wellcome: "Wellcome to Exam Management System"
+      error_message: "Created account fail"
+  shared:
+    error_messages:
+      error: "Error"
+  sessions:
+    create:
+      no_user: "User not found"
+    new:
+      title: "Login"
+      submit: "Login"
+      sign_up: "Sign up"
+      forgot_password: "Forgot password?"
+      remember_me: "Remember me on this computer"

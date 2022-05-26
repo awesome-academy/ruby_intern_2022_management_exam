@@ -1,7 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.align-center{
+.align-center {
   text-align: center;
 }
 
@@ -11,4 +11,54 @@
   width: 100%;
   height: 60px;
   background-color: #f5f5f5;
+}
+
+input,
+textarea,
+select,
+.uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+input {
+  height: auto !important;
+}
+
+.password-info {
+  text-transform: initial;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
+
+.checkbox {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  span {
+    font-weight: normal;
+    margin-left: 20px;
+  }
+}
+
+#session_remember_me {
+  margin-left: 0;
+  width: auto;
+}
+
+.s-13 {
+  font-size: 13px;
 }
