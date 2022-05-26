@@ -38,3 +38,8 @@ en:
       sign_up: "Sign up"
       forgot_password: "Forgot password?"
       remember_me: "Remember me on this computer"
+    find_by_email:
+      find_error: "Can't find email"
+  subjects:
+    form_subject:
+      exam: "Start exam"

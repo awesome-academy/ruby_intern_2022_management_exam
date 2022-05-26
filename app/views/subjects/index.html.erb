@@ -1,0 +1,7 @@
+<%= render "layouts/search" %>
+<div class="align-center">
+  <%== pagy_bootstrap_nav @pagy %>
+</div>
+<div id="subject">
+  <%= render partial: "form_subject",  collection: @subjects, as: :subject %>
+</div>
