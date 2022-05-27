@@ -52,3 +52,21 @@ vi:
       sign_up: "Đăng ký"
       forgot_password: "Quên mật khẩu?"
       remember_me: "Ghi nhớ đăng nhập"
+    find_by_email:
+      find_error: "Can't find email"
+  subjects:
+    form_subject:
+      exam: "Start exam"
+  exams:
+    index:
+      login_warning: "Bạn chưa đăng nhập!"
+      title: "Danh sách bài thi"
+      created_date: "Đã taọ ngaỳ"
+      subject: "Môn học"
+      status: "Trạng thái"
+      duration: "Khoảng thời gian"
+      question_number: "Câu hỏi số"
+      spent_time: "Thời gian"
+      score: "Điểm"
+      view: "Xem"
+      status_unchecked: "Chưa kiểm tra"

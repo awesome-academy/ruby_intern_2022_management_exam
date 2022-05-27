@@ -57,3 +57,16 @@ en:
   subjects:
     form_subject:
       exam: "Start exam"
+  exams:
+    index:
+      login_warning: "You are not logged in!"
+      title: "List Of Exams"
+      created_date: "Created Date"
+      subject: "Subject"
+      status: "Status"
+      duration: "Duration"
+      question_number: "Question number"
+      spent_time: "Spent Time"
+      score: "Score"
+      view: "View"
+      status_unchecked: "unchecked"
