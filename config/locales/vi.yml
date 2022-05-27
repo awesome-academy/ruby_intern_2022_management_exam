@@ -24,6 +24,9 @@ vi:
       log_in: "Đăng nhập"
       home: "Trang chủ"
       home_name: "Hệ thống quản lý bài thi"
+      exams: "Bài thi"
+      log_out: "Đăng xuất"
+      profile: "Hồ sơ"
     footer:
       english: "Tiếng Anh"
       change_language: "Thay đổi ngôn ngữ"
@@ -33,11 +36,16 @@ vi:
       warning: "Bạn là quản trị viên"
       home_name: "Hệ thống quản lý bài thi"
       sign_up_now: "Đăng ký ngay"
+      subject_list: "Xem danh sách môn học"
   users:
     new:
       title: "Đăng ký"
       password_require: "(Tối thiểu 6 ký tự)"
       submit: "Đăng ký"
+      email: "Email"
+      name: "Họ và tên"
+      password: "Mật khẩu"
+      password_confirmation: "Xác nhận mật khâủ"
     show:
       show_error: "Không có thông tin người dùng"
     create:
@@ -55,6 +63,8 @@ vi:
       sign_up: "Đăng ký"
       forgot_password: "Quên mật khẩu?"
       remember_me: "Ghi nhớ đăng nhập"
+      email: "Email"
+      password: "Mật khẩu"
     find_by_email:
       find_error: "Can't find email"
   subjects:
@@ -73,3 +83,11 @@ vi:
       score: "Điểm"
       view: "Xem"
       status_unchecked: "Chưa kiểm tra"
+    show:
+      title: "Bài kiểm tra"
+      no_exam: "Không tìm thâý bài thi!"
+      submit: "Nộp bài"
+  records:
+    create:
+      submit_success: "Nộp bài thành công"
+      submit_fail: "Nộp bài thất baị"

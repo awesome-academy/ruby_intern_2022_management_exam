@@ -8,8 +8,9 @@ Rails.application.routes.draw do
     delete "logout" => "sessions#destroy"
     resources :users
     resources :exams
+    resources :exam_questions
     resources :subjects, only: :index
-
+    resources :records, only: :create
     namespace :admin do
       root "admin_page#home"
     end

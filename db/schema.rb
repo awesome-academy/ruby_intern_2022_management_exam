@@ -10,16 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_30_034534) do
-
-  create_table "exam_questions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.bigint "exam_id", null: false
-    t.bigint "question_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["exam_id"], name: "index_exam_questions_on_exam_id"
-    t.index ["question_id"], name: "index_exam_questions_on_question_id"
-  end
+ActiveRecord::Schema.define(version: 2022_06_03_064559) do
 
   create_table "exams", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "user_id", null: false
@@ -30,6 +21,15 @@ ActiveRecord::Schema.define(version: 2022_05_30_034534) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["subject_id"], name: "index_exams_on_subject_id"
     t.index ["user_id"], name: "index_exams_on_user_id"
+  end
+
+  create_table "exams_question", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "exam_id", null: false
+    t.bigint "question_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["exam_id"], name: "index_exams_question_on_exam_id"
+    t.index ["question_id"], name: "index_exams_question_on_question_id"
   end
 
   create_table "options", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -94,10 +94,10 @@ ActiveRecord::Schema.define(version: 2022_05_30_034534) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "exam_questions", "exams"
-  add_foreign_key "exam_questions", "questions"
   add_foreign_key "exams", "subjects"
   add_foreign_key "exams", "users"
+  add_foreign_key "exams_question", "exams"
+  add_foreign_key "exams_question", "questions"
   add_foreign_key "options", "questions"
   add_foreign_key "questions", "subjects"
   add_foreign_key "records", "exams"

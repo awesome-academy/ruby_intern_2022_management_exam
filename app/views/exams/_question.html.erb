@@ -1,0 +1,9 @@
+<li class="exam-questions">
+  <strong><%= question.description %></strong>
+  <% question.options.each do |answer| %>
+    <div class="radio">
+      <%= f.radio_button "question_#{question.id}", answer.id %>
+      <%= answer.description %>
+    </div>
+  <% end %>
+</li>
