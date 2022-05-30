@@ -1,5 +1,19 @@
 en:
+  admin:
+    admin_page:
+      home:
+        title: "Admin"
   layouts:
+    admin:
+      header:
+        home: "Dashboard"
+        profile: "Profile"
+        title: "Exam Management System"
+      sidebar:
+        question: "Questions"
+        exam: "Exams"
+        subject: "Subjects"
+        trainee: "Trainees"
     application:
       base_title: "Exam Management System"
       sign_up_now: "Sign Up Now"

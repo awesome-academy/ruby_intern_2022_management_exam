@@ -1,14 +1,54 @@
 vi:
+  admin:
+    admin_page:
+      home:
+        title: "Quản trị"
   layouts:
+    admin:
+      header:
+        home: "Trang chủ"
+        profile: "Hồ sơ"
+        title: "Hệ thống quản lý bài thi"
+      sidebar:
+        question: "Câu hỏi"
+        exam: "Bài thi"
+        subject: "Chủ đề"
+        trainee: "Học viên"
     application:
       base_title: "Hệ thống quản lý bài thi"
-      home: "Trang chủ"
+      sign_up_now: "Đăng ký ngay"
+    header:
       sign_up: "Đăng ký"
       log_in: "Đăng nhập"
-      change_language: "Thay đổi ngôn ngữ"
+      home: "Trang chủ"
+      home_name: "Hệ thống quản lý bài thi"
+    footer:
       english: "Tiếng Anh"
+      change_language: "Thay đổi ngôn ngữ"
       vietnamese: "Tiếng Việt"
   static_pages:
     home:
       home_name: "Hệ thống quản lý bài thi"
       sign_up_now: "Đăng ký ngay"
+  users:
+    new:
+      title: "Đăng ký"
+      password_require: "(Tối thiểu 6 ký tự)"
+      submit: "Đăng ký"
+    show:
+      show_error: "Không có thông tin người dùng"
+    create:
+      wellcome: "Chào mừng đến với hệ thống luyện thi"
+      error_message: "Tạo tài khoản thất bại"
+  shared:
+    error_messages:
+      error: "Lỗi"
+  sessions:
+    create:
+      no_user: "Không tìm thấy người dùng"
+    new:
+      title: "Đăng nhập"
+      submit: "Đăng nhập"
+      sign_up: "Đăng ký"
+      forgot_password: "Quên mật khẩu?"
+      remember_me: "Ghi nhớ đăng nhập"
