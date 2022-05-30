@@ -1,9 +1,29 @@
 en:
   admin:
+    subjects:
+      index:
+        add: "Add"
+        title: "Subjects"
+      update:
+        success: "Subject updated successfully!"
+        fail: "Failed to update subject"
+      create:
+        success: "Subject added successfully!"
+        fail: "Failed to add subject"
+      admin_subject:
+        time: "Created at"
+        name: "Name"
+        duration: "Duration"
+      subject:
+        confirm: "You sure?"
+      subject_form:
+        name: "Name"
+        duration: "Duration"
+        submit: "Save"
     admin_page:
       home:
         admin_warning: "You are not admin"
-        title: "Admin"
+        title: "Home"
         login_warning: "You are not logged in!"
     users:
       search:
@@ -24,7 +44,7 @@ en:
         messgae_fail: "Delete Fail!"
   layouts:
     admin:
-      base_title: "Admin site"
+      admin_title: "Admin"
       header:
         home: "Dashboard"
         profile: "Profile"
@@ -72,6 +92,13 @@ en:
   shared:
     error_messages:
       error: "Error"
+    admin_subject:
+      edit: "Edit"
+      delete: "Delete"
+      time: "Created at"
+      name: "Name"
+      duration: "Duration"
+      confirm: "You sure?"
   sessions:
     create:
       no_user: "User not found"

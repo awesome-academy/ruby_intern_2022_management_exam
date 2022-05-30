@@ -1,11 +1,9 @@
-30.times do |n|
-  exam_id = rand 1..5
-  quest_id = rand 1..66
-  ExamQuestion.create!(exam_id: exam_id,
-                      question_id: quest_id,
-                      created_at: Time.now,
-                      updated_at: Time.now
-                      )
+1.times do |n|
+  name = Faker::ProgrammingLanguage.name
+  duration = rand 20..30
+  Subject.create!(name: name,
+                  duration: duration
+                 )
 end
 
 User.create!(name: "ADMIN",

@@ -1,0 +1,7 @@
+<% provide :title, t(".title") %>
+<h1 class="page-header">
+  <%= t ".title" %>
+</h1>
+<%= link_to t(".add"), new_admin_subject_path,
+                        class:"btn btn-lg btn-primary" %>
+<%= render "admin_subject" %>

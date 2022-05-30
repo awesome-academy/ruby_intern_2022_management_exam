@@ -1,8 +1,9 @@
 class ApplicationController < ActionController::Base
   before_action :set_locale
 
-  include Pagy::Backend
+  include ApplicationHelper
   include SessionsHelper
+  include Pagy::Backend
 
   private
 
@@ -31,5 +32,12 @@ class ApplicationController < ActionController::Base
 
     flash[:danger] = t ".admin_warning"
     redirect_to root_path
+  end
+
+  def load_subject
+    @subject = Subject.find_by id: params[:id]
+    return if @subject.present?
+
+    flash[:danger] = t ".not_found"
   end
 end

@@ -8,8 +8,11 @@ user:
     min_length: 6
 subject:
   item: 6
+  admin_item: 6
   link_image: "https://avatars.githubusercontent.com/u/4223"
 index:
   time_format: "%m-%d-%Y %l:%M %p"
 admin:
   list_item: 10
+  subjects:
+    name_length: 20

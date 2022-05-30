@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     namespace :admin do
       root "admin_page#home"
       resources :users
+      resources :subjects
     end
   end
 end
