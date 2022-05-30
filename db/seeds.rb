@@ -17,3 +17,19 @@ end
                finish_time: random_time,
               )
 end
+
+User.create!(name: "Khang",
+  email: "khangt893@gmail.com",
+  password: "123456",
+  password_confirmation: "123456",
+  role: 1,
+  activated: true,
+  activated_at: Time.zone.now)
+
+User.create!(name: "Son",
+  email: "sontran@gmail.com",
+  password: "123456",
+  password_confirmation: "123456",
+  role: 0,
+  activated: true,
+  activated_at: Time.zone.now)

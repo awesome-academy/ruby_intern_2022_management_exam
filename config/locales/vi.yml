@@ -2,7 +2,9 @@ vi:
   admin:
     admin_page:
       home:
+        admin_warning: "Bạn không phải quản trị viên"
         title: "Quản trị"
+        login_warning: "Bạn chưa đăng nhập!"
   layouts:
     admin:
       header:
@@ -28,6 +30,7 @@ vi:
       vietnamese: "Tiếng Việt"
   static_pages:
     home:
+      warning: "Bạn là quản trị viên"
       home_name: "Hệ thống quản lý bài thi"
       sign_up_now: "Đăng ký ngay"
   users:
