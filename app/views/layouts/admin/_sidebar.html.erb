@@ -1,0 +1,14 @@
+<div class="col-sm-3 col-md-2 sidebar">
+  <ul class="nav nav-sidebar">
+    <li><%= link_to t ".question" %></li>
+    <li><%= link_to t ".exam" %></li>
+    <li><%= link_to t ".subject" %></li>
+    <li><%= link_to t ".trainee" %></li>
+
+  </ul>
+  <div class="footer">
+    <p class="text-muted"><%= t "layouts.footer.change_language" %></p>
+    <%= link_to t("layouts.footer.english"), locale: :en %> |
+    <%= link_to t("layouts.footer.vietnamese"), locale: :vi %>
+  </div>
+</div>
