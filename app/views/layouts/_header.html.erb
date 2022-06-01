@@ -7,14 +7,15 @@
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to t(".home"), root_path %></li>
         <% if logged_in? %>
+          <li><%= link_to t(".exams"), exams_path %></li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <%= current_user.name %>
               <i class="fa-solid fa-angle-down s-13"></i>
             </a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-              <li><%= link_to "Profile", current_user %></li>
-              <li> <%= link_to "Log out", logout_path, method: :delete %></li>
+              <li><%= link_to t(".profile"), current_user %></li>
+              <li> <%= link_to t(".log_out"), logout_path, method: :delete %></li>
             </ul>
           </li>
         <% else %>

@@ -1,2 +1,74 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "color.scss";
+
+
+.align-center {
+  text-align: center;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  margin-top: 20px;
+  width: 100%;
+  height: 60px;
+  background-color: $footer-color;
+}
+
+input,
+textarea,
+select,
+.uneditable-input {
+  border: 1px solid $bbb-color;
+  width: 100%;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+input {
+  height: auto !important;
+}
+
+.password-info {
+  text-transform: initial;
+}
+
+#error_explanation {
+  color: $red-color;
+}
+
+#error_explanation ul {
+  color: $red-color;
+  margin: 0 0 30px;
+}
+
+.checkbox {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.checkbox span {
+  font-weight: normal;
+  margin-left: 10px;
+}
+
+#session_remember_me {
+  margin-left: 0;
+  width: auto;
+}
+
+.s-13 {
+  font-size: 13px;
+}
+
+.card-image {
+  padding: 45px 45px 20px 45px;
+  background-color: $card-color !important;
+}
+
+.subject-name {
+  text-align: center;
+  font-family: georgia;
+  color: $subject-color;
+}
