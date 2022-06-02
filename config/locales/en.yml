@@ -2,7 +2,9 @@ en:
   admin:
     admin_page:
       home:
+        admin_warning: "You are not admin"
         title: "Admin"
+        login_warning: "You are not logged in!"
   layouts:
     admin:
       header:
@@ -28,6 +30,7 @@ en:
       vietnamese: "Vietnamese"
   static_pages:
     home:
+      warning: "You are an Admin"
       home_name: "Exam Management System"
       sign_up_now: "Sign Up Now"
   users:

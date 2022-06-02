@@ -7,7 +7,11 @@ class SessionsController < ApplicationController
     if @user&.authenticate params[:session][:password]
       log_in @user
       params[:session][:remember_me] == "1" ? remember(@user) : forget(@user)
-      redirect_to root_path
+      if is_admin?
+        redirect_to admin_root_path
+      else
+        redirect_to root_path
+      end
     else
       flash[:danger] = t ".no_user"
       render :new
