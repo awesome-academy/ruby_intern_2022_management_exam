@@ -8,7 +8,7 @@
 }
 
 .footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   margin-top: 20px;
   width: 100%;
@@ -50,7 +50,7 @@ input {
 
 .checkbox span {
   font-weight: normal;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 #session_remember_me {
@@ -71,4 +71,22 @@ input {
   text-align: center;
   font-family: georgia;
   color: $subject-color;
+}
+
+.radio {
+  padding-left: 20px;
+  font-weight: normal;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.radio input[type="radio"] {
+  position: absolute;
+  left: -528px;
+  top: 1px;
+}
+
+.exam-questions{
+  margin: 20px 0;
 }

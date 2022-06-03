@@ -5,10 +5,9 @@
       <tr>
         <th class="created_date"><%= t ".created_date" %></th>
         <th class="subject"><%= t ".subject" %></th>
-        <th class="status"><%= t ".status" %></th>
         <th class="duration"><%= t ".duration" %></th>
         <th class="question_number"><%= t ".question_number" %></th>
-        <th class="spent_time"><%= t ".spent_Time" %></th>
+        <th class="spent_time"><%= t ".spent_time" %></th>
         <th class="score"><%= t ".score" %></th>
         <th class="action"></th>
       </tr>
@@ -18,15 +17,10 @@
         <tr>
           <td><%= exam.created_at.strftime Settings.index.time_format %></td>
           <td><%= exam.subject_name %></td>
-          <td>
-            <span class="label label-info">
-              <%= t ".status_unchecked" %>
-            </span>
-          </td>
           <td><%= exam.subject_duration %></td>
+          <td><%= exam.questions.count %></td>
           <td></td>
-          <td></td>
-          <td></td>
+          <td><%= exam.result_score %></td>
           <td>
             <%= link_to t(".view"), "#", class:"btn btn-success button" %>
           </td>

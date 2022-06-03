@@ -1,21 +1,11 @@
 30.times do |n|
-  name = Faker::ProgrammingLanguage.name
-  Subject.create!(name: name,
-                  duration: 30
-                 )
-end
-
-5.times do |n|
-  id = 1
-  subject_id = rand 8
-  now = Time.now
-  a_day_ago = now - 60 * 60 * 24
-  random_time = rand a_day_ago..now
-  Exam.create!(user_id: id,
-               subject_id: subject_id,
-               start_time: now,
-               finish_time: random_time,
-              )
+  exam_id = rand 1..5
+  quest_id = rand 1..66
+  ExamQuestion.create!(exam_id: exam_id,
+                      question_id: quest_id,
+                      created_at: Time.now,
+                      updated_at: Time.now
+                      )
 end
 
 User.create!(name: "Khang",

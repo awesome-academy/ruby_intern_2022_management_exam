@@ -24,6 +24,9 @@ en:
       log_in: "Login"
       home: "Home"
       home_name: "Exam Management System"
+      exams: "Exams"
+      log_out: "Logout"
+      profile: "Profile"
     footer:
       english: "English"
       change_language: "Change language"
@@ -33,11 +36,16 @@ en:
       warning: "You are an Admin"
       home_name: "Exam Management System"
       sign_up_now: "Sign Up Now"
+      subject_list: "View list subject"
   users:
     new:
       title: "Sign up"
       password_require: "(6 characters minimum)"
       submit: "Sign up"
+      email: "Email"
+      name: "Name"
+      password: "Password"
+      password_confirmation: "Confirmation"
     show:
       show_error: "No information for user"
     create:
@@ -54,7 +62,9 @@ en:
       submit: "Login"
       sign_up: "Sign up"
       forgot_password: "Forgot password?"
-      remember_me: "Remember me on this computer"
+      remember_me: "Remember on this computer"
+      email: "Email"
+      password: "Password"
     find_by_email:
       find_error: "Can't find email"
   subjects:
@@ -73,3 +83,11 @@ en:
       score: "Score"
       view: "View"
       status_unchecked: "unchecked"
+    show:
+      title: "Exam test"
+      no_exam: "Can't find exam!"
+      submit: "Submit"
+  records:
+    create:
+      submit_success: "Submit success!"
+      submit_fail: "Submit fail!"
