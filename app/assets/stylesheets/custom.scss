@@ -2,7 +2,6 @@
 @import "bootstrap";
 @import "color.scss";
 
-
 .align-center {
   text-align: center;
 }
@@ -71,6 +70,9 @@ input {
   text-align: center;
   font-family: georgia;
   color: $subject-color;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .radio {
@@ -87,6 +89,10 @@ input {
   top: 1px;
 }
 
-.exam-questions{
+.exam-questions {
   margin: 20px 0;
+}
+
+.align-left{
+  text-align: left;
 }

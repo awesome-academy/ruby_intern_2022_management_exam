@@ -11,3 +11,5 @@ subject:
   link_image: "https://avatars.githubusercontent.com/u/4223"
 index:
   time_format: "%m-%d-%Y %l:%M %p"
+admin:
+  list_item: 10

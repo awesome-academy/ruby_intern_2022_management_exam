@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     resources :records, only: :create
     namespace :admin do
       root "admin_page#home"
+      resources :users
     end
   end
 end

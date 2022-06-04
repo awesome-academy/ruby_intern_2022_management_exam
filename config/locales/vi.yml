@@ -5,8 +5,23 @@ vi:
         admin_warning: "Bạn không phải quản trị viên"
         title: "Quản trị"
         login_warning: "Bạn chưa đăng nhập!"
+    users:
+      search:
+        search_name: "Tìm kiếm theo tên"
+        search_email: "Tìm kiếm theo email"
+        starte_date: "Ngày bắt đầu"
+        end_date: "Ngày kết thúc"
+      index:
+        title: "Tất cả người dùng"
+        user_list: "Danh sách người dùng"
+        create_time: "Thời gian tạo"
+        name: "Tên"
+        email: "Email"
+      row_users:
+        confirm_delete: "Bạn muốn xoá chứ?"
   layouts:
     admin:
+      base_title: "Admin site"
       header:
         home: "Trang chủ"
         profile: "Hồ sơ"
@@ -88,6 +103,7 @@ vi:
       no_exam: "Không tìm thâý bài thi!"
       submit: "Nộp bài"
     create:
+      login_warning: "Bạn phải đăng nhập thì mới tạo được bài thi!"
       suscess_message: "Tạo bài thi thành công!"
       fail_message: "Tạo bài thi thất bại!"
   records:
