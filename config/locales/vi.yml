@@ -81,12 +81,15 @@ vi:
       question_number: "Câu hỏi số"
       spent_time: "Thời gian"
       score: "Điểm"
-      view: "Xem"
+      start: "Bắt đầu"
       status_unchecked: "Chưa kiểm tra"
     show:
       title: "Bài kiểm tra"
       no_exam: "Không tìm thâý bài thi!"
       submit: "Nộp bài"
+    create:
+      suscess_message: "Tạo bài thi thành công!"
+      fail_message: "Tạo bài thi thất bại!"
   records:
     create:
       submit_success: "Nộp bài thành công"
