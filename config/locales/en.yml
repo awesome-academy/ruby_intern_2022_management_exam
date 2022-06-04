@@ -34,14 +34,41 @@ en:
       index:
         title: "All user"
         user_list: "User list"
+      users:
         create_time: "Create time"
         name: "Name"
         email: "Email"
-      row_users:
+      user:
+        delete: "Delete"
         confirm_delete: "You sure?"
       destroy:
         message_success: "Delete Success!"
         messgae_fail: "Delete Fail!"
+    questions:
+      index:
+        title: "List question"
+        create_question: "Create new question"
+        create_time: "Create time"
+        question: "Question"
+        subject: "Subject"
+      new:
+        title: "Create new questions"
+        single_choice: "Single Choice"
+        multiple_choice: "Multiple Choice"
+        add_options: "Add options"
+        submit: "Submit"
+        question_type: "Question Type"
+        subject: "Subject"
+        description: "Question"
+      option_fields:
+        answer: "Answer"
+        correct: "Correct?"
+        remove_answer: "Remove answer"
+      create:
+        message_success: "Create Question Success!"
+        messgae_fail: "Create Question Fail!"
+      find_question:
+        no_question: "No info question!"
   layouts:
     admin:
       admin_title: "Admin"
