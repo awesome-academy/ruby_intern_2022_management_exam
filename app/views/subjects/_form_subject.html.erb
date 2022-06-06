@@ -1,7 +1,11 @@
-<div class="col-md-4 m-w-200">
-  <div class="jumbotron align-center card-image">
-    <%= image_tag Settings.subject.link_image, class:"img-thumbnail img-responsive" %>
-    <p class="subject-name"><%= subject.name %></p>
-    <%= link_to t(".exam"), "#", class:"btn btn-md btn-primary" %>
+<%= form_for(:exam, url: exams_path, method: :post)  do |f| %>
+  <div class="col-md-4 m-w-200">
+    <div class="jumbotron align-center card-image">
+      <%= image_tag Settings.subject.link_image, class:"img-thumbnail img-responsive" %>
+      <p class="subject-name"><%= subject.name %></p>
+      <p class="subject-name"><%= subject.id %></p>
+      <%= hidden_field_tag :subject_id, subject.id %>
+      <%= f.submit t(".exam"), class:"btn btn-md btn-primary" %>
+    </div>
   </div>
-</div>
+<% end %>

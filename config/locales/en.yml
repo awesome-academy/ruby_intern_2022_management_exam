@@ -69,7 +69,7 @@ en:
       find_error: "Can't find email"
   subjects:
     form_subject:
-      exam: "Start exam"
+      exam: "Create exam"
   exams:
     index:
       login_warning: "You are not logged in!"
@@ -81,12 +81,15 @@ en:
       question_number: "Question number"
       spent_time: "Spent Time"
       score: "Score"
-      view: "View"
+      start: "Start"
       status_unchecked: "unchecked"
     show:
       title: "Exam test"
       no_exam: "Can't find exam!"
       submit: "Submit"
+    create:
+      suscess_message: "Create exam success!"
+      fail_message: "Create failed exam!"
   records:
     create:
       submit_success: "Submit success!"

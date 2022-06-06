@@ -10,6 +10,16 @@ class ExamsController < ApplicationController
     @exam_questions = @exam.questions
   end
 
+  def create
+    new_exam = current_user.exams.new subject_id: params[:subject_id]
+    new_exam.save!
+    flash[:success] = t ".suscess_message"
+    redirect_to exams_path
+  rescue ActiveRecord::ActiveRecordError
+    flash.now[:danger] = t ".fail_message"
+    redirect_to subjects_path
+  end
+
   private
   def find_exam
     @exam = Exam.find_by id: params[:id]
