@@ -5,8 +5,26 @@ en:
         admin_warning: "You are not admin"
         title: "Admin"
         login_warning: "You are not logged in!"
+    users:
+      search:
+        search_name: "Search by name"
+        search_email: "Search by email"
+        starte_date: "Start date"
+        end_date: "End date"
+      index:
+        title: "All user"
+        user_list: "User list"
+        create_time: "Create time"
+        name: "Name"
+        email: "Email"
+      row_users:
+        confirm_delete: "You sure?"
+      destroy:
+        message_success: "Delete Success!"
+        messgae_fail: "Delete Fail!"
   layouts:
     admin:
+      base_title: "Admin site"
       header:
         home: "Dashboard"
         profile: "Profile"
@@ -88,6 +106,7 @@ en:
       no_exam: "Can't find exam!"
       submit: "Submit"
     create:
+      login_warning: "You must be logged in to create a exam!"
       suscess_message: "Create exam success!"
       fail_message: "Create failed exam!"
   records:
