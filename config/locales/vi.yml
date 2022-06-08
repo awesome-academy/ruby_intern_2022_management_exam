@@ -36,11 +36,41 @@ vi:
       index:
         title: "Tất cả người dùng"
         user_list: "Danh sách người dùng"
+      users:
         create_time: "Thời gian tạo"
         name: "Tên"
         email: "Email"
-      row_users:
+      user:
+        delete: "Xoá"
         confirm_delete: "Bạn muốn xoá chứ?"
+      destroy:
+        message_success: "Xoá thành công!"
+        messgae_fail: "Xoá thất bại!"
+    questions:
+      index:
+        title: "Danh sách câu hỏi"
+        create_question: "Tạo câu hỏi mới"
+        create_time: "Thời gian"
+        question: "Câu hỏi"
+        subject: "Môn học"
+      new:
+        title: "Tạo câu hỏi mới"
+        single_choice: "Lựa chọn đơn"
+        multiple_choice: "Nhiều lựa chọn"
+        add_options: "Thêm câu trả lời"
+        submit: "Thêm"
+        question_type: "Loại câu hỏi"
+        subject: "Môn học"
+        description: "Câu hỏi"
+      option_fields:
+        answer: "Đáp án"
+        correct: "Đúng?"
+        remove_answer: "Xoá đáp án"
+      create:
+        message_success: "Tạo câu hỏi thành công!"
+        messgae_fail: "Tạo câu hỏi thất baị!"
+      find_question:
+        no_question: "Không có câu hỏi!"
   layouts:
     admin:
       admin_title: "Quản trị"

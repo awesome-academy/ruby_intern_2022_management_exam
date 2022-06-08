@@ -14,6 +14,14 @@ User.create!(name: "ADMIN",
   activated: true,
   activated_at: Time.zone.now)
 
+User.create!(name: "ADMIN",
+  email: "hoanganhduong3010@gmail.com",
+  password: "123123",
+  password_confirmation: "123123",
+  role: 1,
+  activated: true,
+  activated_at: Time.zone.now)
+
 User.create!(name: "Son",
   email: "sontran@gmail.com",
   password: "123456",

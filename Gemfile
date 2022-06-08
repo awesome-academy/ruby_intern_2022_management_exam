@@ -8,6 +8,7 @@ gem "bcrypt"
 gem "bootsnap", ">= 1.4.2", require: false
 gem "bootstrap-sass", "3.4.1"
 gem "bullet", group: "development"
+gem "cocoon"
 gem "config"
 gem "faker"
 gem "font-awesome-rails"

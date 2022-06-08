@@ -15,6 +15,7 @@ Rails.application.routes.draw do
       root "admin_page#home"
       resources :users
       resources :subjects
+      resources :questions
     end
   end
 end
