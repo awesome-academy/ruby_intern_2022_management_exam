@@ -2,7 +2,7 @@ class RecordsController < ApplicationController
   before_action :logged_in_user, only: %i(create)
 
   def create
-    options = params[:record].values
+    options = params[:record].values.flatten
     user_id = current_user.id
     exam_id = params[:exam_id]
     columns = [:user_id, :exam_id, :option_id]

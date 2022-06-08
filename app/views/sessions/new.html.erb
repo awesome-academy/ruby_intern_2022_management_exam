@@ -10,7 +10,7 @@
       <%= f.label t(".password") %>
       <%= f.password_field :password, class: "form-control" %>
       <%= f.label :remember_me, class: "checkbox inline" do %>
-      <%= f.check_box :remember_me %>
+      <%= f.check_box :remember_me, class: "remember" %>
         <span><%= t ".remember_me" %></span>
       <% end %>
       <%= f.submit t(".submit"), class: "btn btn-primary" %>

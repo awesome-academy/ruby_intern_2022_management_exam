@@ -1,0 +1,20 @@
+<%= form_for [:admin, @question], html:{class: "flex flex-col-rev form-question"} do |f| %>
+  <div>
+    <%= f.label :subject, t(".subject") %>
+    <%= f.select :subject_id, options_for_select(Subject.pluck(:name, :id)) %>
+    <%= f.label :description, t(".description") %>
+    <%= f.text_area :description, class: "form-control" %>
+    <%= f.label :question_type, t(".question_type") %>
+    <%= f.select :question_type, options_for_select([[t(".single_choice"), :single_choice],[t("multiple_choice"), :multiple_choice]]) %>
+    <%= f.fields_for :options do |option| %>
+      <%= render "option_fields", :f => option %>
+    <% end %>
+    <%= link_to_add_association  f, :options do %>
+      <i class="fa-solid fa-plus"></i>
+      <%= t ".add_options" %>
+    <% end %>
+  </div>
+  <div class="btn-submit align-center">
+    <%= f.submit t(".submit"), class: "btn btn-primary submit" %>
+  </div>
+<% end %>

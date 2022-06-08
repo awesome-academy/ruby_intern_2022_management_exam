@@ -1,9 +1,19 @@
 <li class="exam-questions">
-  <strong><%= question.description %></strong>
-  <% question.options.each do |answer| %>
-    <div class="radio">
-      <%= f.radio_button "question_#{question.id}", answer.id %>
-      <%= answer.description %>
-    </div>
+  <% if question.single_choice? %>
+    <strong><%= question.description %></strong>
+    <% question.options.each do |answer| %>
+      <div class="radio">
+        <%= f.radio_button "question_#{question.id}", answer.id %>
+        <%= answer.description %>
+      </div>
+    <% end %>
+  <% elsif question.multiple_choice? %>
+     <strong><%= question.description %></strong>
+      <% question.options.each do |answer| %>
+      <div class="checkbox">
+        <%= f.check_box "question_#{question.id}",  {multiple: true}, answer.id, nil %>
+        <%= answer.description %>
+      </div>
+    <% end %>
   <% end %>
 </li>

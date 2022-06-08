@@ -1,7 +1,10 @@
-<tr>
+<tr id="question-<%= question.id %>">
   <td><%= question.created_at.strftime Settings.index.time_format %></td>
   <td><%= question.description %></td>
   <td><%= question.subject_name %></td>
-  <td></td>
-  <td></td>
+  <td><%= link_to t(".edit"), edit_admin_question_path(question.id) %></td>
+  <td><%= link_to t(".delete"), admin_question_path(question.id),
+                                method: :delete,
+                                remote: true,
+                                data: {confirm: t(".confirm_delete")} %></td>
 </tr>
