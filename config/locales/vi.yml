@@ -1,9 +1,31 @@
 vi:
   admin:
+    subjects:
+      index:
+        add: "Thêm"
+        title: "Chủ đề"
+      update:
+        success: "Cập nhật chủ đề thành công!"
+        fail: "Cập nhật chủ đề thất bại"
+      create:
+        success: "Thêm thành công chủ đề!"
+        fail: "Thêm chủ đề thất bại"
+      admin_subject:
+        time: "Thời gian tạo"
+        name: "Tên"
+        duration: "Thời lượng"
+      subject:
+        confirm: "Bạn muốn xoá chứ?"
+        edit: "Sửa"
+        delete: "Xóa"
+      subject_form:
+        name: "Tên"
+        duration: "Thời lượng"
+        submit: "Lưu"
     admin_page:
       home:
         admin_warning: "Bạn không phải quản trị viên"
-        title: "Quản trị"
+        title: "Trang chủ"
         login_warning: "Bạn chưa đăng nhập!"
     users:
       search:
@@ -21,7 +43,7 @@ vi:
         confirm_delete: "Bạn muốn xoá chứ?"
   layouts:
     admin:
-      base_title: "Admin site"
+      admin_title: "Quản trị"
       header:
         home: "Trang chủ"
         profile: "Hồ sơ"

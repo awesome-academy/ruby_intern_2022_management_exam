@@ -1,0 +1,11 @@
+<tr>
+  <td><%= subject.created_at.to_s :short %></td>
+  <td><%= subject.name %></td>
+  <td><%= subject.duration %></td>
+  <td>
+    <%= link_to t(".edit"), edit_admin_subject_path(subject.id) %>
+  </td>
+  <td><%= link_to t(".delete"), admin_subject_path(subject.id),
+                                  method: :delete,
+                                  data: { confirm: t(".confirm") } %></td>
+</tr>
