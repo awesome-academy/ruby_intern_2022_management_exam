@@ -1,4 +1,4 @@
-1.times do |n|
+30.times do |n|
   name = Faker::ProgrammingLanguage.name
   duration = rand 20..30
   Subject.create!(name: name,
@@ -14,18 +14,10 @@ User.create!(name: "ADMIN",
   activated: true,
   activated_at: Time.zone.now)
 
-User.create!(name: "ADMIN",
-  email: "hoanganhduong3010@gmail.com",
+User.create!(name: "Hoang Anh",
+  email: "duong.hoang.anh@sun-asterisk.com",
   password: "123123",
   password_confirmation: "123123",
-  role: 1,
-  activated: true,
-  activated_at: Time.zone.now)
-
-User.create!(name: "Son",
-  email: "sontran@gmail.com",
-  password: "123456",
-  password_confirmation: "123456",
   role: 0,
   activated: true,
   activated_at: Time.zone.now)

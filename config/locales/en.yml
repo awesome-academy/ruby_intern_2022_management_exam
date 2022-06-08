@@ -51,6 +51,7 @@ en:
         create_time: "Create time"
         question: "Question"
         subject: "Subject"
+        admin_warning: "You are not admin"
       new:
         title: "Create new questions"
         single_choice: "Single Choice"
@@ -60,6 +61,18 @@ en:
         question_type: "Question Type"
         subject: "Subject"
         description: "Question"
+      edit:
+        title: "Edit questions"
+        single_choice: "Single Choice"
+        multiple_choice: "Multiple Choice"
+        add_options: "Add options"
+        question_type: "Question Type"
+        subject: "Subject"
+        description: "Question"
+      question:
+        confirm_delete: "You sure?"
+      form_question:
+        submit: "Submit"
       option_fields:
         answer: "Answer"
         correct: "Correct?"
@@ -69,6 +82,9 @@ en:
         messgae_fail: "Create Question Fail!"
       find_question:
         no_question: "No info question!"
+      update:
+        message_success: "Update Question Success!"
+        messgae_fail: "Update Question Fail!"
   layouts:
     admin:
       admin_title: "Admin"

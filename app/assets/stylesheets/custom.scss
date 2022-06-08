@@ -83,7 +83,21 @@ input {
   margin-bottom: 10px;
 }
 
+.checkbox {
+  padding-left: 20px;
+  font-weight: normal;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .radio input[type="radio"] {
+  position: absolute;
+  left: -528px;
+  top: 1px;
+}
+
+.checkbox input[type="checkbox"] {
   position: absolute;
   left: -528px;
   top: 1px;
@@ -93,6 +107,11 @@ input {
   margin: 20px 0;
 }
 
-.align-left{
+.align-left {
   text-align: left;
+}
+
+.remember {
+  left: 10px !important;
+  top: -1px !important;
 }

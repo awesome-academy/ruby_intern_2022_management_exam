@@ -53,7 +53,18 @@ vi:
         create_time: "Thời gian"
         question: "Câu hỏi"
         subject: "Môn học"
+        admin_warning: "Bạn không phải quản trị viên"
+      question:
+        confirm_delete: "Bạn chắc chắn muốn xoá?"
       new:
+        title: "Sửa câu hỏi"
+        single_choice: "Lựa chọn đơn"
+        multiple_choice: "Nhiều lựa chọn"
+        add_options: "Thêm câu trả lời"
+        question_type: "Loại câu hỏi"
+        subject: "Môn học"
+        description: "Câu hỏi"
+      edit:
         title: "Tạo câu hỏi mới"
         single_choice: "Lựa chọn đơn"
         multiple_choice: "Nhiều lựa chọn"
@@ -62,6 +73,8 @@ vi:
         question_type: "Loại câu hỏi"
         subject: "Môn học"
         description: "Câu hỏi"
+      form_question:
+        submit: "Thêm"
       option_fields:
         answer: "Đáp án"
         correct: "Đúng?"
@@ -71,6 +84,9 @@ vi:
         messgae_fail: "Tạo câu hỏi thất baị!"
       find_question:
         no_question: "Không có câu hỏi!"
+      update:
+        message_success: "Cập nhật câu hỏi thành công!"
+        messgae_fail: "Cập nhật câu hỏi thất bại!"
   layouts:
     admin:
       admin_title: "Quản trị"

@@ -22,9 +22,28 @@ class Admin::QuestionsController < AdminController
 
   def edit; end
 
-  def update; end
+  def update
+    if @question.update question_params
+      flash[:success] = t ".message_success"
+      redirect_to admin_questions_path
+    else
+      flash[:danger] = t ".message_fail"
+      render :edit
+    end
+  end
 
-  def destroy; end
+  def destroy
+    if @question.destroy
+      flash.now[:success] = t ".message_success"
+      respond_to do |format|
+        format.js
+        format.html
+      end
+    else
+      flash[:danger] = t ".message_fail"
+      redirect_to admin_questions_path
+    end
+  end
 
   private
   def find_question
