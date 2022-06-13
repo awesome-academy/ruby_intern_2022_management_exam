@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  VALID_EMAIL_REGEX = Settings.user.email_regex
   has_many :records, dependent: :destroy
   has_many :exams, dependent: :destroy
   has_many :results, dependent: :destroy
@@ -11,6 +12,7 @@ class User < ApplicationRecord
 
   validates :email, presence: true,
             length: {maximum: Settings.user.email.max_length},
+            format: {with: VALID_EMAIL_REGEX},
             uniqueness: true
   validates :name, presence: true,
             length: {maximum: Settings.user.name.max_length}
@@ -75,8 +77,11 @@ class User < ApplicationRecord
     update_attribute :remember_digest, nil
   end
 
-  def authenticated? remember_token
-    BCrypt::Password.new remember_digest.is_password? remember_token
+  def authenticated? attribute, token
+    digest = send "#{attribute}_digest"
+    return false unless digest
+
+    BCrypt::Password.new(digest).is_password? token
   end
 
   private
