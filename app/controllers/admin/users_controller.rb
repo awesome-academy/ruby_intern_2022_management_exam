@@ -1,9 +1,7 @@
 class Admin::UsersController < AdminController
   def index
-    @pagy, @users = pagy User.by_name(params[:name])
-                             .by_created_at(params[:start_date],
-                                            params[:end_date])
-                             .by_email(params[:email]),
+    @search = User.ransack(params[:search])
+    @pagy, @users = pagy @search.result,
                          items: Settings.admin.list_item
     respond_to do |format|
       format.js

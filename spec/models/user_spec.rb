@@ -92,45 +92,5 @@ RSpec.describe User, type: :model do
         end
       end
     end
-
-    describe ".by_between_date" do
-      context "when found by date to date" do
-        it "should search user" do
-          expect(User.by_between_date("2022-06-05","2023-06-11").pluck(:id)).to eq [user_1.id]
-        end
-      end
-
-      context "when not found" do
-        it "should be empty" do
-          expect(User.by_between_date("", "").pluck(:id)).to eq []
-        end
-      end
-    end
-
-    describe ".by_created_at" do
-      context "when end date blank" do
-        it "should search user" do
-          expect(User.by_created_at("2022-06-11", "").pluck(:id)).to eq [user_1.id]
-        end
-      end
-
-      context "when start date blank" do
-        it "should search user" do
-          expect(User.by_created_at("", "2023-06-11").pluck(:id)).to eq [user_1.id]
-        end
-      end
-
-      context "when found date to date" do
-        it "should search user" do
-          expect(User.by_created_at("2022-06-05", "2023-06-11").pluck(:id)).to eq [user_1.id]
-        end
-      end
-
-      context "when end start date and end date blank" do
-        it "should search user" do
-          expect(User.by_created_at("", "").pluck(:id)).to eq User.all.ids
-        end
-      end
-    end
   end
 end
