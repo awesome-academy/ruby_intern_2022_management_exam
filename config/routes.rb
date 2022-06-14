@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
   scope "(:locale)", locale: /en|vi/ do
+    devise_for :users
     root "static_pages#home"
-    get "/signup" => "users#new"
-    get "/signup" => "users#create"
-    get "/login" => "sessions#new"
-    post "login" => "sessions#create"
-    delete "logout" => "sessions#destroy"
+    as :user do
+      get "/login", to: "devise/sessions#new"
+      post "/login", to: "devise/sessions#create"
+      delete "/logout", to: "devise/sessions#destroy"
+      get "/signup", to: "devise/registration#new"
+    end
     resources :users
     resources :exams
     resources :exam_questions

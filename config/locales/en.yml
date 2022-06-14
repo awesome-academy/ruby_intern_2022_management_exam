@@ -1,4 +1,12 @@
 en:
+  devise:
+    registrations:
+      new:
+        sign_up: "Sign up"
+        characters_minimum: "Characters minimum"
+    sessions:
+      new:
+        login: "Login"
   admin:
     subjects:
       index:

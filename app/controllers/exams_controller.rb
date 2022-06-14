@@ -1,5 +1,5 @@
 class ExamsController < ApplicationController
-  before_action :logged_in_user
+  before_action :authenticate_user!
   before_action :find_exam, only: %i(show)
 
   def index

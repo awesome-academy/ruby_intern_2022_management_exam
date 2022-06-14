@@ -1,6 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "color.scss";
+@import "libcss";
 
 .align-center {
   text-align: center;
@@ -114,4 +115,16 @@ input {
 .remember {
   left: 10px !important;
   top: -1px !important;
+}
+
+.alert-alert {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+.alert-notice {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
 }

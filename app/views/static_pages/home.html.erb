@@ -1,7 +1,7 @@
 <div class="jumbotron">
   <h1 class="align-center"><%= t ".home_name" %></h1>
   <p class="align-center">
-    <% if logged_in? %>
+    <% if user_signed_in? %>
       <%= link_to t(".subject_list"), subjects_path, class:"btn btn-lg btn-primary" %>
     <% else %>
       <%= link_to t(".sign_up_now"), signup_path, class:"btn btn-lg btn-primary" %>
