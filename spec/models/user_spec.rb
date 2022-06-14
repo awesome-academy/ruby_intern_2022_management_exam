@@ -23,6 +23,7 @@ RSpec.describe User, type: :model do
     context "when field password" do
       subject{FactoryBot.build(:user)}
       it {should validate_length_of(:password).is_at_least(Settings.user.password.min_length)}
+      it {should validate_length_of(:password).is_at_most(Settings.user.password.max_length)}
       it {should validate_confirmation_of(:password)}
     end
   end

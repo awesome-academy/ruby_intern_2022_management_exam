@@ -1,6 +1,3 @@
-class Admin::AdminPageController < ApplicationController
-  layout "admin"
-  before_action :authenticate_user!, :admin_user
-
+class Admin::AdminPageController < AdminController
   def home; end
 end

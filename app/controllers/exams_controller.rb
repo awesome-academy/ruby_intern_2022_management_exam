@@ -1,6 +1,7 @@
 class ExamsController < ApplicationController
   before_action :authenticate_user!
   before_action :find_exam, only: %i(show)
+  authorize_resource
 
   def index
     @exams = current_user.exams
