@@ -1,24 +1,28 @@
-<div class="align-center">
-  <%= form_tag admin_users_path, class:"navbar-form", remote: true, method: :get do %>
+<div class="align-center ">
+  <%= search_form_for [:admin, @search], class:"navbar-form flex flex-space-between ", remote: true do |f| %>
+    <div class="flex align-end">
+      <i class="fa-solid fa-filter s-16 m-r-5"></i>
+      <%= sort_link @search, :created_at, t(".created_at") %>
+    </div>
     <div class="input-group flex align-end">
       <div class="flex">
         <div class="flex flex-col align-left">
-          <%= label :name, t(".search_name") %>
-          <%= text_field_tag :name, params[:name], class:"form-control" %>
+          <%= label :name, t(".search_name_and_email") %>
+          <%= f.search_field :name_or_email_cont, class:"form-control" %>
         </div>
         <div class="flex flex-col align-left m-l-5">
-          <%= label :name, t(".search_email") %>
-          <%= text_field_tag :email, params[:email], class:"form-control" %>
+          <%= label :name, t(".search_created_date") %>
+          <%= f.date_field :created_at_eq, class:"form-control" %>
         </div>
       </div>
       <div class="flex">
         <div class="flex flex-col align-left m-l-5">
           <%= label :name, t(".starte_date") %>
-          <%= date_field_tag :start_date, nil, max: Date.today, class:"form-control"%>
+          <%= f.date_field :by_start_date, class:"form-control" %>
         </div>
         <div class="flex flex-col align-left m-l-5">
           <%= label :name, t(".end_date") %>
-          <%= date_field_tag :end_date, nil, max: Date.today, class:"form-control" %>
+          <%= f.date_field :by_end_date, class:"form-control" %>
         </div>
       </div>
       <div class="input-group-btn m-l-5">
