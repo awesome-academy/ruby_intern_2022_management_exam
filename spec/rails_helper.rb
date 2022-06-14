@@ -37,7 +37,7 @@ RSpec.configure do |config|
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.
-  config.use_transactional_fixtures = true
+  config.use_transactional_fixtures = false
 
   # You can uncomment this line to turn off ActiveRecord support entirely.
   # config.use_active_record = false
@@ -63,6 +63,9 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
   require "simplecov"
   require "simplecov-rcov"
+  require "shoulda/matchers"
+  require "factory_bot_rails"
+
   class SimpleCov::Formatter::MergedFormatter
     def format(result)
       SimpleCov::Formatter::HTMLFormatter.new.format(result)
@@ -72,4 +75,11 @@ RSpec.configure do |config|
   SimpleCov.formatter = SimpleCov::Formatter::MergedFormatter
 
   SimpleCov.start "rails"
+
+  Shoulda::Matchers.configure do |config|
+    config.integrate do |with|
+      with.test_framework :rspec
+      with.library :rails
+    end
+  end
 end
