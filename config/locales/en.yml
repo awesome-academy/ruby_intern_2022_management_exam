@@ -39,6 +39,9 @@ en:
         search_name: "Search by name"
         search_email: "Search by email"
         starte_date: "Start date"
+        search_name_and_email: "Search by name or email"
+        created_at: "Sort by create "
+        search_created_date: "Search by created date"
         end_date: "End date"
       index:
         title: "All user"
