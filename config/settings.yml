@@ -5,7 +5,8 @@ user:
   name:
     max_length: 50
   password:
-    min_length: 6
+    min_length: 8
+    max_length: 12
 subject:
   item: 6
   admin_item: 6

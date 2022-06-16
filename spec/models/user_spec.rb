@@ -8,17 +8,16 @@ RSpec.describe User, type: :model do
   end
 
   describe "Validations" do
-    context "when field email" do
-      subject{FactoryBot.build(:user)}
-      it {should validate_presence_of(:email)}
-      it {should validate_length_of(:email).is_at_most(Settings.user.email.max_length)}
-      it {should validate_uniqueness_of(:email)}
-    end
-
     context "when field name" do
       subject{FactoryBot.build(:user)}
       it {should validate_presence_of(:name)}
       it {should validate_length_of(:name).is_at_most(Settings.user.name.max_length)}
+    end
+
+    context "when field email" do
+      subject{FactoryBot.build(:user)}
+      it {should validate_presence_of(:email)}
+      it {should validate_uniqueness_of(:email).ignoring_case_sensitivity}
     end
 
     context "when field password" do
@@ -129,76 +128,6 @@ RSpec.describe User, type: :model do
       context "when end start date and end date blank" do
         it "should search user" do
           expect(User.by_created_at("", "").pluck(:id)).to eq User.all.ids
-        end
-      end
-    end
-
-    describe "Public instance methods" do
-      let(:user){FactoryBot.create :user}
-
-      describe "responds to its methods" do
-        it {is_expected.to respond_to :remember}
-        it {is_expected.to respond_to :authenticated?}
-        it {is_expected.to respond_to :forget}
-      end
-
-      describe "method #remember" do
-        it "returns true" do
-          expect(user.remember).to be true
-        end
-      end
-
-      describe "method #forget" do
-        it "returns true" do
-          expect(user.forget).to be true
-        end
-      end
-
-      describe "method #authenticated?" do
-        it "returns true when correct token" do
-          token = User.new_token
-          remember_token = User.digest token
-          user.update_column :remember_digest, remember_token
-
-          expect(user.authenticated?(:remember, token)).to be true
-        end
-
-        it "returns false when uncorrect token" do
-          remember_token = User.digest User.new_token
-          user.update_column :remember_digest, remember_token
-
-          expect(user.authenticated?(:remember, "unkown")).to be false
-        end
-
-        it "returns false when digest for token is nil" do
-          expect(user.authenticated?(:remember, "unknown")).to be false
-        end
-      end
-    end
-
-    describe "Public class methods" do
-      subject {User}
-
-      describe "responds to its methods" do
-        it {is_expected.to respond_to :new_token}
-        it {is_expected.to respond_to :digest}
-      end
-
-      describe "method .new_token" do
-        it "returns a token with length is 22" do
-          expect(subject.new_token.size).to eq 22
-        end
-      end
-
-      describe "method .digest" do
-        it "returns a digest with length is 60 when min_cost is present " do
-          ActiveModel::SecurePassword.min_cost = 10
-          expect(subject.digest(subject.new_token).size).to eq 60
-        end
-
-        it "returns a digest with length is 60 when min_cost is nil " do
-          ActiveModel::SecurePassword.min_cost = nil
-          expect(subject.digest(subject.new_token).size).to eq 60
         end
       end
     end

@@ -8,13 +8,13 @@ RSpec.describe Admin::UsersController, type: :controller do
   let!(:user_2){FactoryBot.create :user}
 
   before do
-    log_in admin
+    sign_in admin
   end
 
   describe "GET users#index" do
     it "gets all users" do
       get :index
-      expect(assigns(:users).pluck(:id)).to eq([user_1.id, user_2.id, admin.id])
+      expect(assigns(:users)).to eq([user_1, user_2, admin])
     end
 
     it "gets user by params" do
