@@ -4,11 +4,11 @@ class ExamsController < ApplicationController
   authorize_resource
 
   def index
-    @exams = current_user.exams
+    @exams = current_user.exams.includes(:subject, :result)
   end
 
   def show
-    @exam_questions = @exam.questions
+    @exam_questions = @exam.questions.includes(:options)
   end
 
   def create
