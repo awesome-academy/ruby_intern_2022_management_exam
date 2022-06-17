@@ -8,6 +8,7 @@ gem "bcrypt"
 gem "bootsnap", ">= 1.4.2", require: false
 gem "bootstrap-sass", "3.4.1"
 gem "bullet", group: "development"
+gem "cancancan", "~> 2.0"
 gem "cocoon"
 gem "config"
 gem "devise", "~> 4.1"

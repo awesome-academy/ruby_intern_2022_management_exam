@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  authorize_resource
+
   def show
     @user = User.find_by id: params[:id]
     return if @user

@@ -1,5 +1,6 @@
 class RecordsController < ApplicationController
-  before_action :logged_in_user, only: %i(create)
+  before_action :authenticate_user!, only: %i(create)
+  authorize_resource
 
   def create
     options = params[:record].values.flatten

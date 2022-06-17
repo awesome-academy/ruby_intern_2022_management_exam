@@ -33,6 +33,7 @@ en:
         admin_warning: "You are not admin"
         title: "Home"
         login_warning: "You are not logged in!"
+        authorzie_warning: "You do not have access"
     users:
       search:
         search_name: "Search by name"

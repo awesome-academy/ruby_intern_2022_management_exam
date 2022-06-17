@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   include ApplicationHelper
   include SessionsHelper
   include Pagy::Backend
+  rescue_from CanCan::AccessDenied, with: :access_denied
 
   protected
 
@@ -32,17 +33,15 @@ class ApplicationController < ActionController::Base
     {locale: I18n.locale}
   end
 
-  def admin_user
-    return if is_admin?
-
-    flash[:danger] = t ".admin_warning"
-    redirect_to root_path
-  end
-
   def load_subject
     @subject = Subject.find_by id: params[:id]
     return if @subject.present?
 
     flash[:danger] = t ".not_found"
+  end
+
+  def access_denied
+    flash[:danger] = t ".authorzie_warning"
+    redirect_to root_path
   end
 end
