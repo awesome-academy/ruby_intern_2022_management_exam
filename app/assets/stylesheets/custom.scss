@@ -142,3 +142,17 @@ input {
   font-size: 25px;
   font-weight: 500;
 }
+
+.timer {
+  position: absolute;
+  right: 50px;
+  font-size: 20px;
+  border: 1px solid;
+  background-color: #ddd;
+  width: 150px;
+}
+
+.countdown {
+  font-size: 25px;
+  font-weight: 500;
+}

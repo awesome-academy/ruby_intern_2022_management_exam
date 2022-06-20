@@ -1,0 +1,9 @@
+<div class="container">
+  <% if @question.errors.any? %>
+    <ul>
+      <% @question.errors.full_messages.each do |msg| %>
+        <li class="require"><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>

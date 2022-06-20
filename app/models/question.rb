@@ -11,6 +11,9 @@ class Question < ApplicationRecord
   has_many :options, dependent: :destroy
   has_many :exams_questions, dependent: :destroy
   has_many :exams, through: :exams_questions, dependent: :destroy
+
+  validates :description, presence: true
+
   accepts_nested_attributes_for :options,
                                 reject_if: :all_blank,
                                 allow_destroy: true
