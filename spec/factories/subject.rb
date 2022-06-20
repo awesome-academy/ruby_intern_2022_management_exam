@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :subject do
-    name{rand 10000..20000}
+    name{Faker::Beer.brand}
     duration{rand 20..30}
   end
 end

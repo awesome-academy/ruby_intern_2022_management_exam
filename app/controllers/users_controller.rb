@@ -1,6 +1,4 @@
 class UsersController < ApplicationController
-  authorize_resource
-
   def show
     @user = User.find_by id: params[:id]
     return if @user
@@ -16,9 +14,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_parmas
     if @user.save
-      log_in @user
+      sign_in @user
       flash.now[:success] = t ".wellcome"
-      redirect_to @user
+      redirect_to root_path
     else
       flash.now[:danger] = t ".error_message"
       render :new

@@ -4,7 +4,7 @@ RSpec.describe Exam, type: :model do
   describe "Associations" do
     it {should belong_to(:user)}
     it {should belong_to(:subject)}
-    it {should have_one(:result).dependent(:destroy)}
+    it {should have_one(:result).dependent  (:destroy)}
     it {should have_many(:records).dependent(:destroy)}
     it {should have_many(:questions).dependent(:destroy)}
   end
