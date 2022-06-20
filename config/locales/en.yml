@@ -41,7 +41,7 @@ en:
         starte_date: "Start date"
         search_name_and_email: "Search by name or email"
         created_at: "Sort by create "
-        search_created_date: "Search by created date"
+        search_created_date: "Created date"
         end_date: "End date"
       index:
         title: "All user"
@@ -64,6 +64,10 @@ en:
         question: "Question"
         subject: "Subject"
         admin_warning: "You are not admin"
+        import: "Import from Excel file"
+        submit: "Import"
+      search:
+        text_search: "Enter the subject.."
       new:
         title: "Create new questions"
         single_choice: "Single Choice"
@@ -92,6 +96,11 @@ en:
       create:
         message_success: "Create Question Success!"
         messgae_fail: "Create Question Fail!"
+      import:
+        import_blank: "Fields cannot be blank!"
+        import_success: "Question imported."
+        import_fail: "Question import failed"
+        import_error: "Not format"
       find_question:
         no_question: "No info question!"
       update:

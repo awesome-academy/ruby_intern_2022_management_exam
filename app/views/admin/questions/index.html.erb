@@ -1,6 +1,12 @@
 <h1><%= t ".title" %></h1>
-
-<%= link_to t(".create_question"), new_admin_question_path %>
+<div class="w-200">
+  <%= form_tag import_admin_questions_path, multipart: true, class:" m-b-20" do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag t(".submit"), class: "btn btn-success" %>
+  <% end %>
+</div>
+<%= link_to t(".create_question"), new_admin_question_path, class:"btn btn-primary primary" %>
+<%= render "search" %>
 <div class="table-responsive">
   <%= render "questions" %>
   <div class="align-center">

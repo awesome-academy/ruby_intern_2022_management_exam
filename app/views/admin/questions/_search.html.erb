@@ -1,0 +1,12 @@
+<div class="align-center">
+  <%= search_form_for [:admin, @search], class:"navbar-form" do |f| %>
+    <div class="input-group">
+      <%= f.search_field :subject_name_cont, class:"form-control", placeholder: t(".text_search") %>
+      <div class="input-group-btn">
+        <%= button_tag(type: :submit, class: "btn btn-default") do %>
+          <i class="glyphicon glyphicon-search"></i>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -1,4 +1,4 @@
-$( document ).on('turbolinks:load', function() {
+$(document).on('turbolinks:load', function () {
   if ($('.user-exam').length > 0) {
     function timeConvert(num) {
       var minutes = num % 60;
@@ -15,7 +15,7 @@ $( document ).on('turbolinks:load', function() {
       seconds = seconds < 10 ? '0' + seconds : seconds;
       $('.countdown').html(minutes + ':' + seconds);
       timer2 = minutes + ':' + seconds;
-      if (window.location.pathname == '/en/exams' ) clearInterval(interval);
+      if (window.location.pathname == '/en/exams') clearInterval(interval);
       if (seconds <= 0 && minutes <= 0) clearInterval(interval);
       if (timer2 == '0:00') {
         $('.submit-exam').click();
