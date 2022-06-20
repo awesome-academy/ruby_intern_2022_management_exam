@@ -8,7 +8,7 @@ class Exam < ApplicationRecord
 
   delegate :name, :duration, to: :subject, prefix: true, allow_nil: true
   delegate :score, to: :result, prefix: true, allow_nil: true
-  after_save :create_exam_question
+  after_create :create_exam_question
 
   private
 

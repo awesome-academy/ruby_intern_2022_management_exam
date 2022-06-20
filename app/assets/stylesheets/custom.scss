@@ -118,13 +118,27 @@ input {
 }
 
 .alert-alert {
-  color: #a94442;
-  background-color: #f2dede;
-  border-color: #ebccd1;
+  color: $a94442-color;
+  background-color: $f2dede-color;
+  border-color: $ebccd1-color;
 }
 
 .alert-notice {
-  color: #3c763d;
-  background-color: #dff0d8;
-  border-color: #d6e9c6;
+  color: $green-color;
+  background-color: $dff0d8-color;
+  border-color: $d6e9c6-color;
+}
+
+.timer {
+  position: absolute;
+  right: 50px;
+  font-size: 20px;
+  border: 1px solid;
+  background-color: $ddd-color;
+  width: 150px;
+}
+
+.countdown {
+  font-size: 25px;
+  font-weight: 500;
 }

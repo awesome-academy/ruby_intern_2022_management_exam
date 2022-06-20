@@ -187,6 +187,7 @@ en:
       title: "Exam test"
       no_exam: "Can't find exam!"
       submit: "Submit"
+      time_remaining: "Time remaining:"
     create:
       login_warning: "You must be logged in to create a exam!"
       suscess_message: "Create exam success!"
