@@ -17,13 +17,8 @@ RSpec.describe Admin::UsersController, type: :controller do
       expect(assigns(:users)).to eq([user_1, user_2, admin])
     end
 
-    it "gets user by params" do
-      params = {
-        name: user_1.name,
-        email: user_1.email
-      }
-      get :index, params: params, xhr: true
-      expect(assigns(:users).pluck(:id)).to eq [user_1.id]
+    it "gets user by name or email" do
+      expect(User.ransack(name_or_email_cont: user_1.name).result.pluck(:id)).to eq [user_1.id]
     end
   end
 
