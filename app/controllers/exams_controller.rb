@@ -4,7 +4,8 @@ class ExamsController < ApplicationController
   authorize_resource
 
   def index
-    @exams = current_user.exams.includes(:subject, :result)
+    @pagy, @exams = pagy current_user.exams.sort_by_date
+                                     .includes(:subject, :result)
   end
 
   def show
