@@ -2,7 +2,7 @@ class Admin::QuestionsController < AdminController
   before_action :find_question, only: %i(edit update destroy)
 
   def index
-    @pagy, @questions = pagy Question.sort_by_date
+    @pagy, @questions = pagy Question.includes(:subject).sort_by_date
   end
 
   def new
