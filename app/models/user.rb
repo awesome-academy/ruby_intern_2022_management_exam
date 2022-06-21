@@ -34,6 +34,10 @@ class User < ApplicationRecord
     email.downcase!
   end
 
+  ransacker :created_at, type: :date do
+    Arel.sql("date(created_at)")
+  end
+
   class << self
     def ransackable_scopes _auth_object = nil
       %i(by_start_date by_end_date)
