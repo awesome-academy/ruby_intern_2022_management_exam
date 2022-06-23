@@ -12,7 +12,8 @@ class ExamsController < ApplicationController
   end
 
   def create
-    new_exam = current_user.exams.new subject_id: params[:subject_id]
+    new_exam = current_user.exams.new(subject_id: params[:subject_id],
+                                      start_time: Time.zone.now)
     new_exam.save!
     flash[:success] = t ".suscess_message"
     redirect_to exams_path

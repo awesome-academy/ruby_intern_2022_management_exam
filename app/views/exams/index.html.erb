@@ -19,10 +19,10 @@
           <td><%= exam.subject_name %></td>
           <td><%= exam.subject_duration %></td>
           <td><%= exam.questions.count %></td>
-          <td></td>
+          <td><%= spent_time(exam.finish_time, exam.start_time) unless exam.finish_time == nil %></td>
           <td><%= exam.result_score %></td>
           <td>
-            <%= link_to t(".start"), exam, class:"btn btn-success button", id:"exam-#{exam.id}" unless exam.result_score %>
+            <%= link_to t(".start"), exam, class:"btn btn-success button", id:"exam" unless exam.result_score %>
           </td>
         </tr>
       <% end %>

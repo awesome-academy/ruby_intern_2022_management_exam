@@ -1,6 +1,11 @@
 <% provide :title, t(".title") %>
+<%= hidden_field_tag :duration, @exam.subject_duration %>
 <div class="user-exam">
-  <h2 class="align-center"><%= @exam.subject.name %></h2>
+  <h2 class="align-center"><%= @exam.subject_name %></h2>
+  <div class="timer">
+    <div><%= t ".time_remaining" %></div>
+    <div class="countdown align-center"></div>
+  </div>
   <hr>
   <%= form_for(:record, url: records_path)  do |f| %>
     <ol class="exam-questions-list user-exam-questions-list">
@@ -9,6 +14,6 @@
       <% end %>
     </ol>
     <%= hidden_field_tag :exam_id, params[:id] %>
-    <%= f.submit t(".submit"), class: "btn btn-primary" %>
+    <%= f.submit t(".submit"), class: "btn btn-primary submit-exam" %>
   <% end %>
 </div>
