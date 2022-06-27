@@ -72,3 +72,12 @@ select,
   bottom: -50px;
   width: 100%;
 }
+
+.require {
+  color: $red-color;
+}
+
+.required:after {
+  content: " *";
+  color: $red-color;
+}

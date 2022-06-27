@@ -68,6 +68,9 @@ en:
         submit: "Import"
       search:
         text_search: "Enter the subject.."
+      import:
+        import_success: "Question imported."
+        import_fail: "Question import failed"
       new:
         title: "Create new questions"
         single_choice: "Single Choice"
@@ -95,7 +98,7 @@ en:
         remove_answer: "Remove answer"
       create:
         message_success: "Create Question Success!"
-        messgae_fail: "Create Question Fail!"
+        message_fail: "Create Question Fail!"
       import:
         import_blank: "Fields cannot be blank!"
         import_success: "Question imported."

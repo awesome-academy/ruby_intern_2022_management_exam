@@ -2,7 +2,7 @@
   <div>
     <%= f.label :subject, t(".subject") %>
     <%= f.select :subject_id, options_for_select(Subject.pluck(:name, :id)) %>
-    <%= f.label :description, t(".description") %>
+    <%= f.label :description, t(".description"), class: "required" %>
     <%= f.text_area :description, class: "form-control" %>
     <%= f.label :question_type, t(".question_type") %>
     <%= f.select :question_type, options_for_select([[t(".single_choice"), :single_choice],[t("multiple_choice"), :multiple_choice]]) %>
