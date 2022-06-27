@@ -17,7 +17,9 @@ Rails.application.routes.draw do
       root "admin_page#home"
       resources :users
       resources :subjects
-      resources :questions
+      resources :questions do
+        collection {post :import}
+      end
     end
   end
 end

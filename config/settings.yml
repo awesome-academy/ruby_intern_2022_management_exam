@@ -17,3 +17,5 @@ admin:
   list_item: 10
   subjects:
     name_length: 20
+import:
+  arr_items: "%w(xlsx csv xls)"
